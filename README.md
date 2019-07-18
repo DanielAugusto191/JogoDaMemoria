@@ -1,5 +1,5 @@
 # JogoDaMemoria
-Um simples jogo da memoria feito em Python
+Um jogo da memoria feito em Python
 
 <img src="https://user-images.githubusercontent.com/12675265/61456385-44dd5a80-a93c-11e9-937b-dce81253cbd0.png" width="350">
 <img src="https://user-images.githubusercontent.com/12675265/61455892-2460d080-a93b-11e9-8975-2178dfca2c5c.png" width="350">
