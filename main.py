@@ -311,27 +311,29 @@ class MainMenu():
         self.HighscoreLabel = Label(
             self.highscoreFrame, text="HIGHSCORES", style="msgLabelStyle.TLabel", font=("Arial", 20))
         self.HighscoreLabel.place(x=65, y=20, anchor="nw")
-        self.file = open("HighScores.txt", "r")
-        self.lines = self.file.readlines()
-        pontos = []
-        for i in self.lines:
-            nome = i.split('-')[0].replace('(', '')
-            tempPonto = i.split('-')[1].replace(')\n', '').replace(')', '')
-            pontos.append([nome, tempPonto])
-        pontos = dict(pontos)
-        pontos = (sorted(pontos.items(), key=lambda x: x[1]))
-        self.nome = []
-        self.scoreplace = []
-        distanciaNome = 65
-        for i in range(len(pontos)):
-            self.nome.append(Label(self.highscoreFrame, text="{} - {}".format(i +
-                                                                              1, pontos[i][0]), style=("msgLabelStyle.TLabel")))
-            self.nome[i].place(x=20, y=distanciaNome, anchor='nw')
-            self.scoreplace.append(
-                Label(self.highscoreFrame, text=pontos[i][1], style="msgLabelStyle.TLabel"))
-            self.scoreplace[i].place(x=200, y=distanciaNome, anchor="nw")
-            distanciaNome += 25
-
+        try:
+            self.file = open("HighScores.txt", "r")
+            self.lines = self.file.readlines()
+            pontos = []
+            for i in self.lines:
+                nome = i.split('-')[0].replace('(', '')
+                tempPonto = i.split('-')[1].replace(')\n', '').replace(')', '')
+                pontos.append([nome, tempPonto])
+            pontos = dict(pontos)
+            pontos = (sorted(pontos.items(), key=lambda x: x[1]))
+            self.nome = []
+            self.scoreplace = []
+            distanciaNome = 65
+            for i in range(len(pontos)):
+                self.nome.append(Label(self.highscoreFrame, text="{} - {}".format(i +
+                                                                                1, pontos[i][0]), style=("msgLabelStyle.TLabel")))
+                self.nome[i].place(x=20, y=distanciaNome, anchor='nw')
+                self.scoreplace.append(
+                    Label(self.highscoreFrame, text=pontos[i][1], style="msgLabelStyle.TLabel"))
+                self.scoreplace[i].place(x=200, y=distanciaNome, anchor="nw")
+                distanciaNome += 25
+        except IOError as e:
+            print("Não há arquivo para HighScore. Será criado após a primeira partida!")
 
 def main():
     root = Tk()
