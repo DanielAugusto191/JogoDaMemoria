@@ -85,6 +85,7 @@ class Application():
         windowHeight = 750
         window.geometry("{}x{}".format(windowWidth, windowHeight))
         window.resizable(0, 0)
+        window.title("Em jogo")
         sizeGameScreen = 800
         sizeGameScreenY = 700
         # Cores
@@ -230,6 +231,7 @@ class MainMenu():
         windowHeight = 750
         window.resizable(0,0)
         window.geometry("{}x{}".format(windowWidth, windowHeight))
+        window.title("Menu Principal")
         # Styles
         self.mainTitleStyle = Style()
         self.mainTitleStyle.configure(
