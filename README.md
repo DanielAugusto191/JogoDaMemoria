@@ -5,7 +5,7 @@ Features:
 - Tamanho das peças se adéqua a quantidade em relação ao tamanho da janela.(Ou seja, o tamanho das peças se ajusta, para que todas possam sempre caber na janela com mesmo de espaço entre elas)
 - Tempo em Jogo
 - Configurações
-- 98 imagem escolhidas randomicamente. Credito das imagens(https://icons8.com)
+- 98 imagens escolhidas randomicamente. Crédito das imagens(https://icons8.com)
 - HighScore salvo em txt
 
 ~ Daniel Augusto Costa de Sá
